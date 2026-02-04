@@ -18,8 +18,8 @@ export async function submit(
   }
 
   const body: Record<string, unknown> = {
-    type: options.type,
-    url: options.url,
+    submissionType: options.type,
+    submissionUrl: options.url,
   };
 
   const res = await post<SubmitResponse>(`/bakes/${id}/submit`, body);
